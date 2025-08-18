@@ -3,9 +3,9 @@
                                                                                                                                                                                                                                              
 <h3>(این هاست گواهی امنیتی cloudflare SLL دارد )
 <br> 
-    به همراه لایسنس apatche 1.2 
+    به همراه لایسنس apatche 1.2 قوه قضاییه
 </h3>
-
+<h4>توضیحات</h4>
 <br>
 Current encryption mode: Full
 <br>
