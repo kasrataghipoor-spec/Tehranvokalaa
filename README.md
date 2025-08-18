@@ -5,4 +5,5 @@
 
 <br>
 Current encryption mode: Full
-
+<br>
+حالت رمزگذاری فعلی: کامل
