@@ -9,14 +9,14 @@ body {
 
 .container {
   position: relative;
-  width: 550px; /* با درنظر گرفتن فاصله‌ها */
-  height: 550px;
+  width: 500px; /* با درنظر گرفتن فاصله‌ها */
+  height: 500px;
 }
 
 .box {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  width:70px;
+  height: 70px;
   background-image: url(A-first-look-at-the-new-Surface-Pro-6-in-matte-black-7.jpg);
   background-size: 500px 500px;
   background-repeat: no-repeat;
@@ -69,4 +69,5 @@ transform: translateY(-20px);
 
 .box16 { top: 320px;  left: 320px;  background-position: -320px -320px; }
 .box17 { top: 320px;  left: 400px;  background-position: -400px -320px; }
+
 
