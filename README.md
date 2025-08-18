@@ -3,4 +3,5 @@
                                                                                                                                                                                                                                              
 (این هاست گواهی امنیتی cloudflare SLL دارد )
 ----
-ادرس : تهران*******
+Current encryption mode: Full
+----
