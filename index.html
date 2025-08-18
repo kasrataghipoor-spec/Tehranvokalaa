@@ -6,6 +6,79 @@
 <link rel="stylesheet" href="index.css">
 </head>
 <body>
+  <h1 style="font-size:xxx-large ; color: rgb(1, 80, 80); text-align: center;font-family:broyabold;font-weight: 900;">در دست ساخت</h1>
+<div class="time-c" style="color:rgb(1, 80, 80); text-align: center; font-size:34px;position: relative;  border:solid rgb(1, 80, 80) 10px; width: 300px  ; object-fit: cover; overflow-x: hidden; display: block; margin-left: auto; margin-right: auto;">
+    <div class="time" style="color: rgb(1, 80, 80); font-size: 70px; letter-spacing: 2px;"><span>Loading...</span></div>
+    <div class="en"></div>
+    <div class="fa"></div>
+    <script>
+        $(document).ready(function() {
+            // Time
+            ;
+            setInterval(function() {
+                var date = new Date();
+                var hr = date.getHours();
+                var min = date.getMinutes();
+                var sec = date.getSeconds();
+                if (min < 10) {
+                    min = "0" + min;
+                }
+                if (sec < 10) {
+                    sec = "0" + sec;
+                }
+                $('.time').html(hr + ":" + min + ":" + sec);
+            }, 1000);
+            // Date
+
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth();
+            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            var day = date.getDate();
+
+            let today = new Date().toLocaleDateString('fa-IR');
+            var res = today.split("/");
+            /*
+            var month_fa = date.getJalaliMonth();
+            var year_fa = date.getJalaliFullYear();
+            var day_fa = date.getJalaliDate();
+            */
+            var month_fa = res[1];
+            var year_fa = res[0];
+            var day_fa = res[2];
+
+            month_fa = fixNumbers(month_fa);
+            year_fa = fixNumbers(year_fa);
+            day_fa = fixNumbers(day_fa);
+
+
+
+
+
+
+
+            var monthNames_fa = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور",
+                "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"
+            ];
+
+            $('.en').html(year + " " + monthNames[month] + " " + day);
+            $('.fa').html(day_fa + "  " + monthNames_fa[month_fa - 1] + " " + year_fa);
+        });
+
+        var
+            persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g],
+            arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g],
+            fixNumbers = function(str) {
+                if (typeof str === 'string') {
+                    for (var i = 0; i < 10; i++) {
+                        str = str.replace(persianNumbers[i], i).replace(arabicNumbers[i], i);
+                    }
+                }
+                return str;
+            };
+    </script>
+</div> </script>
+
 <div class="grid">
 <div class="container">
   <div class="box box1"></div>
@@ -36,3 +109,4 @@
 
 </body>
 </html>
+
