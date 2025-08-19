@@ -1,0 +1,198 @@
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+    body {
+      font-family: sans-serif;
+      background: #121212;
+      color: #fff;
+    }
+
+    /* سکشن اصلی */
+    .bgimgfsina {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height: 900px; /* هر ارتفاعی بخوای می‌تونی تغییر بدی */
+      background: linear-gradient(180deg, #13212b, #121212);
+      overflow: hidden;
+      text-align: center;
+      
+    }
+
+    /* موج svg */
+    .bgwave {
+      position: absolute;
+      
+      left: 0;
+      top:0 ;
+      width: 100%;
+      height: 58%;
+      display: block;
+     
+    }
+    .bgimgfsina h1{
+        position: absolute;
+        color: #fff;
+        font-size: 190px;
+        z-index: 99;
+        top: 125px;
+        /* text-align: center; */
+        
+    }
+
+    @media (max-width: 1300px) {
+        /* سکشن اصلی */
+    .bgimgfsina {
+      position: relative;
+      width: 100%;
+      height: 900px; /* هر ارتفاعی بخوای می‌تونی تغییر بدی */
+      background: linear-gradient(180deg, #13212b, #121212);
+      overflow: hidden;
+    }
+
+    /* موج svg */
+    .bgwave {
+      position: absolute;
+      
+      left: -200px;
+      top:0 ;
+      width: 200%;
+      height: 430px;
+      display: block;
+    }
+    .bgimgfsina h1{
+        font-size: 100px;
+        top: 120px;
+        margin: 10px;
+    }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /* نوار بالا */
+.toprite {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70vw;
+    height: 80px;
+    background-color: hsla(0, 0%, 100%, 0.1);
+    backdrop-filter: blur(20px);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+    border-radius: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    z-index: 999999999898989899;
+
+}
+
+/* لاگین */
+.login {
+    margin-top: 90px;
+    display: inline-flex;
+    position: relative;
+    text-decoration: none;
+    padding: 12px 24px;
+    text-align: center;
+    background-color: hsla(0, 0%, 100%, 0.137);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(20px);
+    border-radius: 10px;
+    margin: 20px;
+    color: #e8e8e8;
+    transition: all 0.2s;
+    
+}
+
+
+.login:hover {
+    transform: scale(80%);
+}
+
+/* متن پایین دکمه لاگین */
+.login-textery {
+    color: #e8e8e8;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+    
+}
+
+/* دکمه پرداخت */
+.payment {
+    display: inline-flex;
+    position: relative;
+    text-decoration: none;
+    padding: 14px 24px;
+    text-align: center;
+    background-color: green;
+    color: #e8e8e8;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0);
+    backdrop-filter: blur(20px);
+    margin: 20px;
+    border-radius: 10px;
+    transition: all 0.2s;
+    
+}
+
+.payment:hover {
+    transform: scale(110%);
+}
+
+/* ظرف دکمه‌ها */
+.pay,
+.log {
+    z-index: 9999;
+    position: relative;
+    text-align: right;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 700px) {
+    .payment {
+        margin-left: 10px;
+        padding-bottom: 10px;
+    
+    }
+.login-textery{
+    padding-bottom: 0;
+}
+    .login {
+        margin-right: 10px;
+        
+
+    }
+
+    .toprite {
+        width: 86vw;
+    }
+
+}
