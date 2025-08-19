@@ -1,88 +1,27 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>position</title>
-<script src="https://www.bertinapark.com/js/jquery-2.1.4.min.js"></script>
+    <meta charset="UTF-8" dir="rtl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-  <h1 style="font-size:xxx-large ; color: rgb(1, 80, 80); text-align: center;font-family:broyabold;font-weight: 900;">در دست ساخت</h1>
-<div class="time-c" style="color:rgb(1, 80, 80); text-align: center; font-size:34px;position: relative;  border:solid rgb(1, 80, 80) 10px; width: 320px  ; object-fit: cover; overflow-x: hidden; display: block; margin-left: auto; margin-right: auto;">
-    <div class="time" style="color: rgb(1, 80, 80); font-size: 70px; letter-spacing: 2px;"><span>Loading...</span></div>
-    <div class="en"></div>
-    <div class="fa"></div>
-    <script>
-        $(document).ready(function() {
-            // Time
-            ;
-            setInterval(function() {
-                var date = new Date();
-                var hr = date.getHours();
-                var min = date.getMinutes();
-                var sec = date.getSeconds();
-                if (min < 10) {
-                    min = "0" + min;
-                }
-                if (sec < 10) {
-                    sec = "0" + sec;
-                }
-                $('.time').html(hr + ":" + min + ":" + sec);
-            }, 1000);
-            // Date
-
-            var date = new Date();
-            var year = date.getFullYear();
-            var month = date.getMonth();
-            var monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            var day = date.getDate();
-
-            let today = new Date().toLocaleDateString('fa-IR');
-            var res = today.split("/");
-            /*
-            var month_fa = date.getJalaliMonth();
-            var year_fa = date.getJalaliFullYear();
-            var day_fa = date.getJalaliDate();
-            */
-            var month_fa = res[1];
-            var year_fa = res[0];
-            var day_fa = res[2];
-
-            month_fa = fixNumbers(month_fa);
-            year_fa = fixNumbers(year_fa);
-            day_fa = fixNumbers(day_fa);
-
-
-
-
-
-
-
-            var monthNames_fa = ["فروردین", "اردیبهشت", "خرداد", "تیر", "مرداد", "شهریور",
-                "مهر", "آبان", "آذر", "دی", "بهمن", "اسفند"
-            ];
-
-            $('.en').html(year + " " + monthNames[month] + " " + day);
-            $('.fa').html(day_fa + "  " + monthNames_fa[month_fa - 1] + " " + year_fa);
-        });
-
-        var
-            persianNumbers = [/۰/g, /۱/g, /۲/g, /۳/g, /۴/g, /۵/g, /۶/g, /۷/g, /۸/g, /۹/g],
-            arabicNumbers = [/٠/g, /١/g, /٢/g, /٣/g, /٤/g, /٥/g, /٦/g, /٧/g, /٨/g, /٩/g],
-            fixNumbers = function(str) {
-                if (typeof str === 'string') {
-                    for (var i = 0; i < 10; i++) {
-                        str = str.replace(persianNumbers[i], i).replace(arabicNumbers[i], i);
-                    }
-                }
-                return str;
-            };
-    </script>
-</div> </script>
-
-
-</body>
+    <div class="toprite">
+    <div class="pay">
+    <a class="payment" href="./web_10/filimo-login.html">خرید اشتراک</a>
+    </div>
+<div class="log">
+    <a class="login" href="./web_10/filimo-login.html"> <div class="login-textery"> ورود</div>
+    </a>
+    </div>
+  </div>
+    <div class="bgimgfsina">
+        <h1>تهران وکلا</h1>
+    <svg class="bgwave"preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 1440 320"><path fill="#0099ff" fill-opacity="1" d="M0,32L30,53.3C60,75,120,117,180,138.7C240,160,300,160,360,181.3C420,203,480,245,540,256C600,267,660,245,720,240C780,235,840,245,900,234.7C960,224,1020,192,1080,197.3C1140,203,1200,245,1260,229.3C1320,213,1380,139,1410,101.3L1440,64L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z" ></path></svg></div>
+    </svg>
+  </div>
+    
+    
+   
 </html>
-
-
-
-
