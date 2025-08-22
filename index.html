@@ -8,15 +8,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #0a192f;
-            --primary-light: #112240;
-            --secondary: #64ffda;
-            --accent: #ff4d5a;
-            --light: #ccd6f6;
-            --lightest: #e6f1ff;
-            --dark: #020c1b;
+            --primary: #f8f9fa;
+            --primary-light: #ffffff;
+            --secondary: #1e88e5;
+            --accent: #ff5252;
+            --light: #495057;
+            --lightest: #212529;
+            --dark: #e9ecef;
             --transition: all 0.4s cubic-bezier(0.65, 0, 0.35, 1);
             --section-padding: 120px 0;
+            --shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
         * {
@@ -97,21 +98,23 @@
         .btn-primary {
             background-color: var(--secondary);
             color: var(--primary);
-            box-shadow: 0 10px 20px rgba(100, 255, 218, 0.3);
+            text-decoration: none;
+            
         }
 
         .btn-primary:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(100, 255, 218, 0.4);
+            background-color: #245c8d;
         }
 
         .btn-outline {
             border-color: var(--secondary);
             color: var(--secondary);
+            text-decoration: none;
         }
 
         .btn-outline:hover {
-            background-color: rgba(100, 255, 218, 0.1);
+            background-color: rgba(100, 180, 255, 0.1);
             transform: translateY(-5px);
         }
 
@@ -127,12 +130,24 @@
             backdrop-filter: blur(10px);
             border-radius: 9999px;
             margin-top: 5px;
+            
         }
 
         header.scrolled {
-            padding: 15px 0;
-            background-color: rgba(30, 44, 66, 0.599);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            padding: 15px 20px;
+            background: rgba(134, 148, 161, 0.15);
+            border-radius: 9999px;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled:hover {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.5);
         }
 
         .header-container {
@@ -146,6 +161,8 @@
             align-items: center;
             gap: 15px;
             z-index: 1001;
+            text-decoration: none;
+            z-index: -99999999;
         }
 
         .logo-img {
@@ -154,6 +171,7 @@
             border-radius: 50%;
             border: 2px solid var(--secondary);
             overflow: hidden;
+            
         }
 
         .logo-img img {
@@ -178,6 +196,7 @@
             display: flex;
             list-style: none;
             align-items: center;
+            z-index: -9;
         }
 
         nav ul li {
@@ -190,6 +209,7 @@
             font-weight: 500;
             transition: var(--transition);
             position: relative;
+            text-decoration: none;
         }
 
         nav ul li a:after {
@@ -214,23 +234,6 @@
             color: var(--secondary);
         }
 
-        .cta-button {
-            padding: 10px 25px;
-            background-color: var(--secondary);
-            color: var(--primary);
-            border-radius: 50px;
-            font-weight: 600;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(100, 255, 218, 0.3);
-        }
-
         .mobile-menu-btn {
             display: none;
             background: none;
@@ -238,7 +241,10 @@
             color: var(--secondary);
             font-size: 1.8rem;
             cursor: pointer;
-            z-index: 1001;
+            z-index: 99001;
+            /* position: absolute; */
+            /* top: 99px; */
+            margin-top: 7px;
         }
 
         /* Hero Section */
@@ -258,7 +264,7 @@
             right: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to left, rgba(10, 25, 47, 0.9), rgba(10, 25, 47, 0.7));
+             background: rgba(255, 255, 255, 0.7);
             z-index: 1;
         }
 
@@ -270,7 +276,8 @@
             height: 100%;
             object-fit: cover;
             z-index: 0;
-            filter: blur(15px);
+            transform: rotateY(180deg);
+            filter: brightness(1.1);
         }
 
         .hero-content {
@@ -317,7 +324,7 @@
             left: 0;
             width: 100%;
             height: 10px;
-            background-color: rgba(100, 255, 218, 0.3);
+            background-color: rgba(30, 136, 229, 0.322);
             z-index: -1;
         }
 
@@ -887,23 +894,23 @@
             
             nav ul {
                 position: fixed;
-                top: 0;
-                right: -100%;
+                top: -10px;
+                left: -100%;
                 width: 80%;
                 max-width: 300px;
-                height: 100vh;
+                height: 105vh;
                 background-color: var(--primary);
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
                 padding: 100px 30px 30px;
                 transition: var(--transition);
-                z-index: 1000;
+                
                 box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
             }
             
             nav ul.active {
-                right: 0;
+                left: -5px;
             }
             
             nav ul li {
@@ -914,52 +921,232 @@
                 font-size: 1.3rem;
             }
             
+            .hero-buttons {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .hero-buttons .btn {
+                width: 100%;
+            }
+
             .cta-button {
-                display: none;
-            }
-            
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            
-            .hero-description {
-                font-size: 1.1rem;
+                display: none; /* Hide CTA button on mobile */
             }
         }
 
         @media (max-width: 576px) {
-
             :root {
                 --section-padding: 80px 0;
             }
             
-             header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 25px 0;
-            transition: var(--transition);
-            backdrop-filter: blur(10px);
-            border-radius: 9999px;
-            margin-top: 5px;
-        }
+            header {
+                padding: 15px 0;
+                margin-top: 6px;
+                border-radius: 9999px ;
+            }
 
-        header.scrolled {
-            padding: 15px 0;
-            background-color: rgba(30, 44, 66, 0.599);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+            header.scrolled {
+                padding: 10px 0;
+                border-radius: 9999px;
+            }
+
+            .logo-text h1 {
+                font-size: 1.3rem;
+                z-index: -9999;
+            }
+
+            .logo-text p {
+                font-size: 0.7rem;
+                 z-index: -9999;
+            }
+
             .hero {
                 padding-top: 80px;
-                min-height: 700px;
+                min-height: 600px;
             }
             
             .hero-title {
+                font-size: 2rem;
+                
+            }
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            .hero-subtitle::before {
+                width: 50px;
+            }
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+                margin-bottom: 40px;
+            }
+            .section-title p {
+                font-size: 1rem;
+            }
+
+            .about-content h2 {
                 font-size: 2.2rem;
             }
+            .about-content p {
+                font-size: 1rem;
+            }
+            .skill-name, .skill-percent {
+                font-size: 1rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr; /* Stack services vertically */
+            }
+            .service-card {
+                padding: 30px 20px;
+            }
+            .service-card h3 {
+                font-size: 1.3rem;
+            }
+            .service-card p {
+                font-size: 1rem;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr; /* Two columns for stats */
+            }
+            .stat-number {
+                font-size: 2rem;
+            }
+            .stat-text {
+                font-size: 0.9rem;
+            }
+
+            .testimonial-container {
+                padding: 30px;
+            }
+            .testimonial-container::before {
+                font-size: 6rem;
+                top: 20px;
+                right: 30px;
+            }
+            .testimonial-text {
+                font-size: 1rem;
+            }
+            .client-img {
+                width: 60px;
+                height: 60px;
+            }
+            .client-details h4 {
+                font-size: 1.1rem;
+            }
+            .client-details p {
+                font-size: 0.8rem;
+            }
+
+            .contact-form {
+                padding: 30px;
+            }
+            .form-label {
+                font-size: 1rem;
+            }
+            .form-control {
+                padding: 12px 15px;
+                font-size: 0.9rem;
+            }
+            .form-submit {
+                font-size: 1rem;
+                padding: 12px;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr; /* Stack footer columns vertically */
+                gap: 30px;
+            }
+            .footer-col h3 {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
+            }
+            .footer-about p, .footer-links a, .newsletter-input, .newsletter-btn {
+                font-size: 1rem;
+            }
+            .social-link {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+            .copyright p {
+                font-size: 0.8rem;
+            }
         }
+
+        /* Specific fix for very small screens (e.g., 320px width) */
+        @media (max-width: 375px) {
+            .container {
+                padding: 0 15px;
+            }
+            .hero-title {
+                font-size: 1.8rem;
+            }
+            .hero-description {
+                font-size: 0.9rem;
+            }
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .btn {
+                padding: 12px 25px;
+                font-size: 0.9rem;
+            }
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            .section-title p {
+                font-size: 0.9rem;
+            }
+            .about-content h2 {
+                font-size: 2rem;
+            }
+            .about-content p {
+                font-size: 0.9rem;
+            }
+            .service-card h3 {
+                font-size: 1.2rem;
+            }
+            .service-card p {
+                font-size: 0.9rem;
+            }
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            .stat-text {
+                font-size: 0.8rem;
+            }
+            .testimonial-text {
+                font-size: 0.9rem;
+            }
+            .contact-form {
+                padding: 25px;
+            }
+            .form-label {
+                font-size: 0.9rem;
+            }
+            .form-control {
+                padding: 10px 12px;
+                font-size: 0.85rem;
+            }
+            .form-submit {
+                font-size: 0.9rem;
+                padding: 10px;
+            }
+            .footer-col h3 {
+                font-size: 1.2rem;
+            }
+            .footer-about p, .footer-links a, .newsletter-input, .newsletter-btn {
+                font-size: 0.9rem;
+            }
+        }
+
 
         /* Animations */
         @keyframes fadeIn {
@@ -992,7 +1179,7 @@
         }
     </style>
 </head>
-<body>
+<body >
     <!-- Header -->
     <header id="header">
         <div class="container header-container">
@@ -1001,7 +1188,7 @@
                     <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3c83e3e4-3a98-44a0-b6a6-ca4ab5d8253d.png" alt="پرتره اکبر تقی پور">
                 </div>
                 <div class="logo-text">
-                    <h1>تهران وکلا</h1>
+                    <h1 >تهران وکلا</h1>
                     <p>وکیل پایه یک دادگستری</p>
                 </div>
             </a>
@@ -1029,7 +1216,7 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <img src="2b2e523b-bd37-44d4-bb00-1aafa517c6ae.png" alt="دفتر کار مدرن وکیل" class="hero-bg">
+        <img  src="law-background.webp" alt="دفتر کار مدرن وکیل" class="hero-bg">
         
         <div class="container">
             <div class="hero-content fade-in">
@@ -1043,7 +1230,7 @@
                         <i class="fas fa-phone-alt"></i>
                         درخواست مشاوره
                     </a>
-                    <a href="#about" class="btn btn-outline">
+                    <a href="#about"  class="btn btn-outline">
                         <i class="fas fa-user-tie"></i>
                         درباره من
                     </a>
@@ -1057,7 +1244,7 @@
         <div class="container">
             <div class="about-container">
                 <div class="about-img">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/09dc0d97-f949-4641-b39b-d66896667cf7.png" alt="اکبر تقی پور در دفتر کار">
+                    <img src="https://behtarinvakilshahr.ir/pics/22/22342.jpg" alt="اکبر تقی پور در دفتر کار">
                 </div>
                 <div class="about-content">
                     <div class="section-title">
