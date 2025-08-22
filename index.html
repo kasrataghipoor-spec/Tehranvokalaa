@@ -141,12 +141,12 @@
 
         header.scrolled {
             padding: 15px 20px;
-            background: rgba(134, 148, 161, 0.15);
+             background: rgba(134, 148, 161, 0.15);
             border-radius: 9999px;
            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.479);
             color: #fff;
             
             transition: all 0.3s ease;
@@ -174,18 +174,25 @@
         }
 
         .logo-img {
-            width: 50px;
-            height: 50px;
+            width: 55px;
+            height: 55px;
             border-radius: 50%;
             border: 2px solid var(--secondary);
             overflow: hidden;
             
+            
         }
 
         .logo-img img {
-            width: 100%;
-            height: 100%;
+            width: 200%;
+            position: relative;
+            top: -18px;
+            left: 10px;
+            height: 200%;
             object-fit: cover;
+            object-position: left;
+            
+    
         }
 
         .logo-text h1 {
@@ -520,7 +527,7 @@
         .stat-item {
             padding: 30px;
             border-radius: 10px;
-            background-color: rgba(100, 255, 218, 0.05);
+             background: rgba(53, 121, 184, 0.15);
             border: 1px solid rgba(100, 255, 218, 0.1);
             transition: var(--transition);
         }
@@ -1208,15 +1215,48 @@
         .skill-progress {
             animation: skillAnimation 1.5s ease-out forwards;
         }
+        .topritino{
+     position: fixed;
+            bottom: 10px;
+            right: 10px;
+            padding: 10px 20px;
+            background: rgba(134, 148, 161, 0.15);
+            border-radius: 9999px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(1.5px);
+            
+            
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.791);
+            color: #141518;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            z-index: 8999;
+            cursor: pointer;
+            font-size: 24px;
+            font-weight: bold;
+        
+        
+            }
+            .topritino a{
+                text-decoration: none;
+            }
     </style>
 </head>
 <body>
+    <a href="tel:09122340547">
+    <div class="topritino">تماس با ما </div>
+    </a>
     <!-- Header -->
+
     <header id="header">
         <div class="container header-container">
             <a href="#" class="logo">
                 <div class="logo-img">
-                    <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3c83e3e4-3a98-44a0-b6a6-ca4ab5d8253d.png" alt="پرتره اکبر تقی پور">
+                    <img src="4photoshop-kanoonVokala-vector-logo-لوگو-کانون-وکلا-دادگستری.jpg" alt="پرتره اکبر تقی پور">
                 </div>
                 <div class="logo-text">
                     <h1 >تهران وکلا</h1>
@@ -1311,10 +1351,10 @@
                         <div class="skill-item">
                             <div class="skill-header">
                                 <span class="skill-name">حقوق تجارت</span>
-                                <span class="skill-percent">85%</span>
+                                <span class="skill-percent">100%</span>
                             </div>
                             <div class="skill-bar">
-                                <div class="skill-progress" style="--skill-level: 85%;"></div>
+                                <div class="skill-progress" style="--skill-level: 100%;"></div>
                             </div>
                         </div>
                     </div>
@@ -1333,7 +1373,7 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-number">01</div>
+                    
                     <div class="service-icon">
                         <i class="fas fa-gavel"></i>
                     </div>
@@ -1346,7 +1386,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-number">02</div>
+                    
                     <div class="service-icon">
                         <i class="fas fa-home"></i>
                     </div>
@@ -1359,7 +1399,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-number">03</div>
+                    
                     <div class="service-icon">
                         <i class="fas fa-users"></i>
                     </div>
@@ -1371,8 +1411,8 @@
                     </a>
                 </div>
                 
-                <div class="service-card">
-                    <div class="service-number">04</div>
+                <!-- <div class="service-card">
+                    
                     <div class="service-icon">
                         <i class="fas fa-briefcase"></i>
                     </div>
@@ -1383,6 +1423,30 @@
                         <i class="fas fa-arrow-left"></i>
                     </a>
                 </div>
+                <div class="service-card">
+                    
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>حقوق تجارت</h3>
+                    <p>مشاوره و پیگیری پرونده‌های تجاری، شرکتها، ورشکستگی و تمامی مسائل حقوقی مرتبط با تجارت</p>
+                    <a href="#contact" class="service-link">
+                        بیشتر بدانید
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                <div class="service-card">
+                    
+                    <div class="service-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>حقوق تجارت</h3>
+                    <p>مشاوره و پیگیری پرونده‌های تجاری، شرکتها، ورشکستگی و تمامی مسائل حقوقی مرتبط با تجارت</p>
+                    <a href="#contact" class="service-link">
+                        بیشتر بدانید
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div> -->
             </div>
         </div>
     </section>
