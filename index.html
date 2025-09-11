@@ -516,13 +516,14 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 40px;
+            transition: 1s all;
         }
 
         .service-card {
             background-color: var(--primary-light);
             border-radius: 15px;
             padding: 40px 30px;
-            transition: var(--transition);
+            transition: 1s all;
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(100, 255, 218, 0.1);
@@ -530,7 +531,7 @@
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+          
             border-color: var(--secondary);
         }
 
@@ -543,6 +544,7 @@
         .service-card h3 {
             color: var(--lightest);
             font-size: 1.5rem;
+            transition: 1s all;
             margin-bottom: 20px;
         }
 
@@ -557,7 +559,8 @@
             gap: 10px;
             color: var(--secondary);
             font-weight: 600;
-            transition: var(--transition);
+            transition: 1s all;
+            text-decoration: none;
         }
 
         .service-link i {
@@ -572,6 +575,7 @@
         /* Stats Section */
         .stats {
             background-color: var(--primary-light);
+            transition: 1s all;
         }
 
         .stats-grid {
@@ -583,6 +587,9 @@
 
         .stat-item {
             padding: 30px;
+            transition: 1s all;
+
+
             border-radius: 10px;
              background: rgba(53, 121, 184, 0.15);
             border: 1px solid rgba(100, 255, 218, 0.1);
@@ -609,6 +616,7 @@
         /* Testimonials Section */
         .testimonials {
             position: relative;
+            transition: 1s all;
             background-color: var(--primary-light);
         }
 
@@ -619,6 +627,7 @@
             background-color: var(--primary);
             border-radius: 15px;
             position: relative;
+            transition: 1s all;
             border: 1px solid rgba(100, 255, 218, 0.1);
         }
 
@@ -626,6 +635,7 @@
             content: '"';
             position: absolute;
             top: 30px;
+            transition: 1s all;
             right: 50px;
             font-size: 8rem;
             color: rgba(100, 255, 218, 0.1);
@@ -1504,14 +1514,17 @@ body.dark-mode .hero-description {
         }
         body.dark-mode .testimonials {
             position: relative;
+            transition: 1s all;
             background-color:#121212;
         }
 body.dark-mode .stats {
             background-color: #141518;
+            transition: 1s all;
         }
         body.dark-mode .testimonial-text {
             font-size: 1.2rem;
             color: white;
+            transition: 1s all;
             margin-bottom: 30px;
             line-height: 1.8;
         }
@@ -1554,6 +1567,50 @@ body.dark-mode .section-title h2 {
             transition: 1s all;
             background: none;
         }
+        body.dark-mode .service-card {
+            background-color: #212529;
+            border-radius: 15px;
+            padding: 40px 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(48, 56, 54, 0.1);
+        }
+        body.dark-mode .service-card h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+       body.dark-mode .service-card p {
+            color: var(--light);
+            margin-bottom: 25px;
+        }
+        body.dark-mode .service-card:hover {
+            transform: translateY(-10px);
+          
+            border-color: whitesmoke;
+        }
+        body.dark-mode .contact-form {
+            background-color: #212529;
+            padding: 50px;
+            border-radius: 15px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+        }
+        
+        body.dark-mode footer {
+            background-color:#212529;
+            padding: 80px 0 0;
+            
+        }
+        body.dark-mode .footer-col h3 {
+            color: #1e88e5;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
     </style>
     
 </head>
