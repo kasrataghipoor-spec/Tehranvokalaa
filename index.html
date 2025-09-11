@@ -95,12 +95,12 @@
         }
 
         section {
-            padding: var(--section-padding);
+            padding: 40px 0;
             position: relative;
         }
 
         .section-title {
-            margin-bottom: 80px;
+            margin-bottom: 55px;
         }
 
         .section-title h2 {
@@ -217,9 +217,12 @@
             display: flex;
             align-items: center;
             gap: 15px;
-            z-index: 1001;
+            
             text-decoration: none;
-            z-index: -99999999;
+            /* z-index: -99999999; */
+        }
+        .logo-img:hover{
+            transform:scale(300%) translatey(59px) translateX(-40px);
         }
 
         .logo-img {
@@ -229,6 +232,7 @@
             border: 2px solid var(--secondary);
             overflow: hidden;
             object-fit: contain;
+            transform: scale(100%);
             
         }
 
@@ -245,15 +249,16 @@
         }
 
         .logo-text h1 {
-            font-size: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 700;
+            text-align: right;
             color: var(--secondary);
         }
 
         .logo-text p {
-            font-size: 0.8rem;
+            font-size: 1rem;
             color: var(--light);
-            margin-top: 3px;
+            margin-top: 0;
         }
 
         nav ul {
@@ -422,16 +427,17 @@
         .about-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 30px;
             align-items: center;
             transition: 1.5s all;
         }
 
         .about-img {
             position: relative;
-            border-radius: 10px;
+            border-radius: 0px;
             overflow: hidden;
             transition: 1.5s all;
+            
             box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
@@ -961,11 +967,13 @@
             
             .about-container {
                 grid-template-columns: 1fr;
+                
             }
             
             .about-img {
                 max-width: 600px;
                 margin: 0 auto;
+                
             }
             
             .contact-container {
@@ -1060,11 +1068,12 @@
 
             .logo-text h1 {
                 font-size: 1.3rem;
+                text-align: right;
                 z-index: -9999;
             }
 
             .logo-text p {
-                font-size: 0.7rem;
+                font-size: .9rem;
                  z-index: -9999;
             }
 
@@ -1493,7 +1502,7 @@ body.dark-mode header{
     border-radius: 9999px;
 }
 body.dark-mode .about-content h2 {
-            font-size: 2.8rem;
+            /* font-size: 2.8rem; */
             color: white;
             margin-bottom: 30px;
         }
@@ -1503,13 +1512,13 @@ body.dark-mode .about-content h2 {
         }
 
        body.dark-mode .about-content p {
-            font-size: 1.1rem;
+            /* font-size: 1.1rem; */
             color: white;
             margin-bottom: 25px;
             line-height: 1.8;
         }
 body.dark-mode .hero-description {
-            font-size: 1.3rem;
+            /* font-size: 1.3rem; */
             color: white;
             margin-bottom: 40px;
             max-width: 600px;
@@ -1524,7 +1533,7 @@ body.dark-mode .stats {
             transition: 1s all;
         }
         body.dark-mode .testimonial-text {
-            font-size: 1.2rem;
+            /* font-size: 1.2rem; */
             color: white;
             transition: 1s all;
             margin-bottom: 30px;
@@ -1541,16 +1550,16 @@ body.dark-mode .stats {
         }
         body.dark-mode  .client-details h4 {
             color: rgb(196, 255, 245);
-            font-size: 1.3rem;
+            /* font-size: 1.3rem; */
             margin-bottom: 5px;
         }
 
         body.dark-mode .client-details p {
             color: rgb(255, 255, 255);
-            font-size: 0.9rem;
+            /* font-size: 0.9rem; */
         }
 body.dark-mode .section-title h2 {
-            font-size: 2.5rem;
+            /* font-size: 2.5rem; */
             font-weight: 700;
             color: #6e9cbd;
             margin-bottom: 20px;
@@ -1559,13 +1568,13 @@ body.dark-mode .section-title h2 {
         }
         body.dark-mode .about-img img{
 
-            opacity: 0;
+            
             transition: 1s all;
             
         }
          body.dark-mode .about-img{
 
-            opacity: 0;
+            
             transition: 1s all;
             background: none;
         }
@@ -1580,12 +1589,12 @@ body.dark-mode .section-title h2 {
         }
         body.dark-mode .service-card h3 {
             color: white;
-            font-size: 1.5rem;
+            /* font-size: 1.5rem; */
             margin-bottom: 20px;
         }
 
        body.dark-mode .service-card p {
-            color: var(--light);
+            color: rgb(200, 214, 216);
             margin-bottom: 25px;
         }
         body.dark-mode .service-card:hover {
@@ -1607,7 +1616,7 @@ body.dark-mode .section-title h2 {
         }
         body.dark-mode .footer-col h3 {
             color: #1e88e5;
-            font-size: 1.5rem;
+            /* font-size: 1.5rem; */
             margin-bottom: 30px;
             position: relative;
             padding-bottom: 15px;
@@ -1634,7 +1643,7 @@ body.dark-mode .section-title h2 {
 
     <header id="header">
         <div class="container header-container">
-            <a href="#" class="logo">
+            <a href="#home" class="logo">
                 <div class="logo-img">
                     <img src="LOGO.jpg" alt="پرتره اکبر تقی پور">
                 </div>
@@ -2167,7 +2176,6 @@ body.dark-mode .section-title h2 {
     </script>
 </body>
 </html>
-
 
 
 
