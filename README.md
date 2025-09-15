@@ -1,7 +1,7 @@
     
  <h1>سلام به تهران وکلا خوش امدید </h1>
  
- <img src="https://github.com/user-attachments/assets/1caf58a0-0afd-491a-8b58-4f89d9144866" width="350px" height="80"/>                                                                                                                                                                                                                           
+ <img src="https://github.com/user-attachments/assets/1caf58a0-0afd-491a-8b58-4f89d9144866" width="650px" height="100"/>                                                                                                                                                                                                                           
 <h3>(این هاست گواهی امنیتی cloudflare SLL دارد )
 <br> 
     به همراه لایسنس apatche 1.2 قوه قضاییه
