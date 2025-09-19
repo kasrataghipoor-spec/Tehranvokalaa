@@ -58,6 +58,10 @@
 
 
 <style>
+   @font-face {
+    font-family: btitr;
+    src: url(BTitrBd.woff2);
+   }
     :root {
         --primary: #f8f9fa;
         --primary-light: #ffffff;
@@ -75,13 +79,15 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Noto Naskh Arabic', serif;
+       font-family: btitr;
         transition: 1s all;
+        font-family: btitr;
     }
 
     html {
         transition: 1s all;
         scroll-behavior: smooth;
+        
     }
 
     body {
@@ -89,6 +95,7 @@
         color: var(--light);
         line-height: 1.7;
         overflow-x: hidden;
+        font-family: btitr;
         transition: 1s all;
     }
 
@@ -196,12 +203,14 @@
 
     header.scrolled {
         padding: 15px 20px;
-        background: rgba(134, 148, 161, 0.15);
-        border-radius: 9999px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(15px);
-        border: 1px solid rgba(255, 255, 255, 0.479);
+        backdrop-filter: blur(18px) saturate(150%) brightness(108%);
+    background-color: rgba(23, 23, 23, 0.075);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 6px 24px, rgba(255, 255, 255, 0.12) 0px 1px inset;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 9999px;
+    border-color: rgba(255, 255, 255, 0.692);
+    border-image: initial;
         color: #fff;
 
         transition: all 0.3s ease;
@@ -1017,7 +1026,7 @@
     @media (max-width: 768px) {
         .hero-bg {
             /* transform: rotateY(380deg); */
-           
+            background-position: right;
         }
 
         .mobile-menu-btn {
@@ -1407,6 +1416,7 @@
         font-weight: bold;
         overflow: hidden;
         transition: all 1s linear;
+         font-family: 'Noto Naskh Arabic', serif !important;
     }
 
     /* انیمیشن دور بوردر */
@@ -1480,6 +1490,7 @@
         background: #ffffff;
         border-radius: 9999px;
         z-index: -1;
+         font-family: 'Noto Naskh Arabic', serif;
     }
 
     .dark-mode-toggle {
@@ -1915,7 +1926,7 @@
                 <p class="hero-subtitle">وکلای پایه یک دادگستری</p>
                 <h1 class="hero-title">تهران <span>وکلا</span></h1>
                 <p class="hero-description">
-                    با بیش از ۱۵ سال تجربه موفق در پرونده‌های حقوقی و کیفری پیچیده، من آماده ارائه بهترین خدمات حقوقی
+                    با بیش از ۳۳ سال تجربه موفق در پرونده‌های حقوقی و کیفری پیچیده، من آماده ارائه بهترین خدمات حقوقی
                     برای شما هستم.
                 </p>
                 <div class="hero-buttons">
@@ -1945,7 +1956,7 @@
                         <p>آشنایی با سوابق و تخصص‌های حقوقی وکیل اکبر تقی پور</p>
                     </div>
 
-                    <p>به عنوان وکیل پایه یک دادگستری با بیش از ۳۵ سال سابقه درخشان در زمینه حقوق کیفری، خانواده و
+                    <p>به عنوان وکیل پایه یک دادگستری با بیش از ۱۵ سال سابقه درخشان در زمینه حقوق کیفری، خانواده و
                         تجارت، همواره تلاش کرده‌ام با تکیه بر دانش حقوقی عمیق و تجربه گسترده، بهترین نتیجه ممکن را برای
                         موکلین خود به ارمغان بیاورم.</p>
 
@@ -2423,5 +2434,3 @@
 </body>
 
 </html>
-
-
